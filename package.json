@@ -14,8 +14,8 @@
     "drizzle:update": "drizzle-kit generate:sqlite --out ./app/drizzle/migrations --schema ./app/drizzle/schema.server.ts",
     "typegen": "wrangler types",
     "db:sql": "drizzle-kit generate:sqlite --out ./app/drizzle/sql --schema ./app/drizzle/schema.server.ts",
-    "db:migrate:local": "pnpm run drizzle:update && npx wrangler d1 migrations apply db --local",
-    "db:migrate": "pnpm run drizzle:update && npx wrangler d1 migrations apply db --remote",
+    "db:migrate:local": "pnpm run drizzle:update && npx wrangler d1 migrations apply back-on-track --local",
+    "db:migrate": "pnpm run drizzle:update && npx wrangler d1 migrations apply back-on-track --remote",
     "fmt": "prettier --write \"app/**/*.{tsx,ts,css}\" \"drizzle/**/*.ts\""
   },
   "dependencies": {
